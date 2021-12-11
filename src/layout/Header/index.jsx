@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import HeaderTop from "./HeaderTop";
-import HeaderBottom from "./HeaderBottom";
+import HeaderTop from "./Top";
+import HeaderBottom from "./Bottom";
 
 Header.propTypes = {};
 

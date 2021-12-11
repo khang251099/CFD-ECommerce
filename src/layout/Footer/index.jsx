@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FooterTop from "./FooterTop";
-import FooterBottom from "./FooterBottom";
+import FooterTop from "./Top";
+import FooterBottom from "./Bottom";
 
 Footer.propTypes = {};
 

@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 
 //Core
+@import "./core/libs";
 @import "./core/reset";
 @import "./core/variable";
 @import "./core/mixins";
-@import "./core/libs";
 @import "./core/fonts.scss";
-
-@import "./core/nav";
 
 //Modules
 @import "./modules/badge";
@@ -17,6 +15,8 @@
 
 //layout
 @import "./layout/layout";
+@import "./layout/header";
+@import "./layout/menu";
 @import "./layout/footer";
 
 //components
