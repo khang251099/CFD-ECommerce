@@ -79,6 +79,98 @@ const data = {
         ],
       },
     ],
+    tagProducts: [
+      {
+        id: "tag1",
+        name: "Beans",
+        link: "",
+      },
+      {
+        id: "tag2",
+        name: "Carrots",
+        link: "",
+      },
+      {
+        id: "tag3",
+        name: "Apples",
+        link: "",
+      },
+      {
+        id: "tag4",
+        name: "Garlic",
+        link: "",
+      },
+      {
+        id: "tag5",
+        name: "Mushrooms",
+        link: "",
+      },
+      {
+        id: "tag6",
+        name: "Tomatoes",
+        link: "",
+      },
+      {
+        id: "tag7",
+        name: "Chilli peppers",
+        link: "",
+      },
+      {
+        id: "tag8",
+        name: "Broccoli",
+        link: "",
+      },
+      {
+        id: "tag9",
+        name: "Watermelons",
+        link: "",
+      },
+      {
+        id: "tag10",
+        name: "Oranges",
+        link: "",
+      },
+      {
+        id: "tag11",
+        name: "Bananas",
+        link: "",
+      },
+      {
+        id: "tag12",
+        name: "Grapes",
+        link: "",
+      },
+      {
+        id: "tag13",
+        name: "Cherries",
+        link: "",
+      },
+      {
+        id: "tag14",
+        name: "Meat",
+        link: "",
+      },
+      {
+        id: "tag15",
+        name: "Seo tag",
+        link: "",
+      },
+      {
+        id: "tag16",
+        name: "Fish",
+        link: "",
+      },
+      {
+        id: "tag17",
+        name: "Fresh food",
+        link: "",
+      },
+      {
+        id: "tag18",
+        name: "Lemons",
+        link: "",
+      },
+    ],
   },
 };
 
