@@ -171,6 +171,99 @@ const data = {
         link: "",
       },
     ],
+    product: [
+      {
+        id: "pro1",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image: "",
+        discound: "36",
+      },
+      {
+        id: "pro2",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image: "",
+        discound: "40",
+      },
+      {
+        id: "pro3",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image: "",
+        discound: "50",
+      },
+      {
+        id: "pro4",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image: "",
+        discound: "36",
+      },
+      {
+        id: "pro5",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image: "",
+        discound: "40",
+      },
+      {
+        id: "pro6",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image: "",
+        discound: "50",
+      },
+    ],
+    blog: [
+      {
+        id: "blog1",
+        title:
+          "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
+        author: "Name and Surname",
+        imgAuthor: "",
+      },
+      {
+        id: "blog2",
+        title:
+          "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
+        author: "Name and Surname",
+        imgAuthor: "",
+      },
+      {
+        id: "blog3",
+        title:
+          "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
+        author: "Name and Surname",
+        imgAuthor: "",
+      },
+      {
+        id: "blog4",
+        title:
+          "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
+        author: "Name and Surname",
+        imgAuthor: "",
+      },
+      {
+        id: "blog5",
+        title:
+          "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
+        author: "Name and Surname",
+        imgAuthor: "",
+      },
+    ],
   },
 };
 

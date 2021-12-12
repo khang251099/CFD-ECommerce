@@ -6,7 +6,7 @@
     width: fit-content;
     height: 26px;
     padding: 5px 16px;
-    margin-left: 12px;
+    margin: 5px 12px 0 0;
 
     p {
       font-family: "Poppins";
@@ -50,6 +50,7 @@
       display: flex;
       justify-content: flex-start;
       margin-left: -220px;
+      margin-top: 50px;
     }
   }
 }

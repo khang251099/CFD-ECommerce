@@ -10,9 +10,7 @@ const FooterBottom = () => {
     setTag(mockData.data.tagProducts);
     return () => {
     };
-  }, [setTag]);
-
-  console.log("tagProduct: ", tag);
+  }, []);
 
   return (
     <div className="footer__item-wrap --bottom">

@@ -10,10 +10,7 @@ const Menu = () => {
     setCate(mockData.data.category);
     return () => {
     };
-  }, [setCate]);
-
-  console.log("cate: ", cate);
-
+  }, []);
 
   return (
     <section className="menu">
