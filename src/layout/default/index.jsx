@@ -4,9 +4,8 @@ import Footer from "../Footer";
 import Home from "../../pages/Home/home";
 import Menu from "../Menu";
 
-LayoutDefault.propTypes = {};
 
-function LayoutDefault(props) {
+const LayoutDefault = () => {
   return (
     <React.Fragment>
       <div className="layout-default">
