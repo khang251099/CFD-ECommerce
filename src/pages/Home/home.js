@@ -5,6 +5,7 @@ import CustomerCard from "../componens/CustomerCard";
 import BannerCate from "./BannerCate";
 import BestFamer from "./BestFamer";
 import BestSell from "./BestSale";
+import BlogPost from "./BlogPosts";
 import Headline from "./Headline";
 import LeftMenu from "./LeftMenu";
 import OurCustomer from "./OurCustomer";
@@ -52,6 +53,9 @@ const Home = () => {
           </section>
           <section className="headline">
             <Headline />
+          </section>
+          <section className="read-blog">
+            <BlogPost />
           </section>
         </div>
       </div>

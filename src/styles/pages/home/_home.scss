@@ -60,7 +60,17 @@
     width: 26%;
   }
 }
-
+.headline-top {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  .btn-flex {
+    position: absolute;
+    top: 11px;
+    right: 0;
+  }
+}
 
 @import "./leftMenu";
-@import "./customerCard"
+@import "./customerCard";
+@import "./blogPost";

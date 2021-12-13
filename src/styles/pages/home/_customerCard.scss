@@ -1,6 +1,12 @@
 .customer {
     padding-top: 69px;
     padding-bottom: 74px;
+    &__swiper {
+      height: 260px !important;
+    }
+    .swiper-slide:not(:first-child) {
+      margin-left: 25px !important;
+    }
     &__item-wrap {
         display: flex;
         align-items: flex-start;
