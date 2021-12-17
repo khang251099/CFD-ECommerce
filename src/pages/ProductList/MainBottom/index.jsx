@@ -5,6 +5,7 @@ import "./style.scss";
 
 
 const MainBottom = (props) => {
+  let { noOfPages, page, handleChange } = props;
   return (
     <div className="main-bottom">
       {/* <label>Page</label> */}
@@ -17,7 +18,7 @@ const MainBottom = (props) => {
         }}
       >
         <p style={{ fontFamily: "Open Sans", fontize: "12px" }}>Page</p>
-        <PagnationContent />{" "}
+        <PagnationContent noOfPages={noOfPages} page={page} handleChange={handleChange} />{" "}
       </div>
 
       <div className="btn-show-more">

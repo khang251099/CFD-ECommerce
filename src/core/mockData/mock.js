@@ -727,10 +727,190 @@ const data = {
           "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
         discount: "50",
       },
+      {
+        id: "pro7",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image:
+          "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "36",
+      },
+      {
+        id: "pro8",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image:
+          "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "0",
+      },
+      {
+        id: "pro9",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image:
+          "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "0",
+      },
+      {
+        id: "pro10",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image:
+          "https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "36",
+      },
+      {
+        id: "pro11",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image:
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "40",
+      },
+      {
+        id: "pro12",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image:
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "50",
+      },
+      {
+        id: "pro13",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image:
+          "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "36",
+      },
+      {
+        id: "pro14",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image:
+          "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "0",
+      },
+      {
+        id: "pro15",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image:
+          "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "0",
+      },
+      {
+        id: "pro16",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image:
+          "https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "36",
+      },
+      {
+        id: "pro17",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image:
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "40",
+      },
+      {
+        id: "pro18",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image:
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "50",
+      },
+      {
+        id: "pro19",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image:
+          "https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "36",
+      },
+      {
+        id: "pro20",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image:
+          "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "0",
+      },
+      {
+        id: "pro21",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image:
+          "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "0",
+      },
+      {
+        id: "pro22",
+        idCate: "",
+        title: "Product title",
+        description: "Space for a small product description",
+        price: "1.48",
+        image:
+          "https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "36",
+      },
+      {
+        id: "pro23",
+        idCate: "",
+        title: "Product title 2",
+        description: "Space for a small product description 2",
+        price: "1.00",
+        image:
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "40",
+      },
+      {
+        id: "pro24",
+        idCate: "",
+        title: "Product title 3",
+        description: "Space for a small product description 3",
+        price: "1.36",
+        image:
+          "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        discount: "50",
+      },
     ],
     blog: [
       {
-        id: "blog1",
+        id: "blog25",
         title:
           "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
         author: "Name and Surname",
@@ -738,7 +918,7 @@ const data = {
           "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        id: "blog2",
+        id: "blog26",
         title:
           "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
         author: "Name and Surname",
@@ -746,7 +926,7 @@ const data = {
           "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        id: "blog3",
+        id: "blog27",
         title:
           "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
         author: "Name and Surname",
@@ -754,7 +934,7 @@ const data = {
           "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
       },
       {
-        id: "blog4",
+        id: "blog28",
         title:
           "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
         author: "Name and Surname",
@@ -762,7 +942,7 @@ const data = {
           "https://media.istockphoto.com/photos/learn-to-love-yourself-first-picture-id1291208214?b=1&k=20&m=1291208214&s=170667a&w=0&h=sAq9SonSuefj3d4WKy4KzJvUiLERXge9VgZO-oqKUOo=",
       },
       {
-        id: "blog5",
+        id: "blog29",
         title:
           "This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here.",
         author: "Name and Surname",
