@@ -1,19 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { filterByCate } from "../../utils/helpers/index";
-import CategoryMain from "./CategoryMain";
-import CategoryTop from "./CategoryTop";
+import LeftMenu from "./LeftMenu";
+import MainBottom from "./MainBottom";
+import MainTop from "./MainTop";
 
 const ProductList = (props) => {
     const { id } = useParams();
-    const cate = filterByCate(id);
     if (!id) {
     }
     return (
         <div className="container-fluid">
             <div className="category-list">
-                <CategoryTop />
-                <CategoryMain />
+                <MainTop />
+                <LeftMenu />
+                <MainBottom />
             </div>
         </div>
     );

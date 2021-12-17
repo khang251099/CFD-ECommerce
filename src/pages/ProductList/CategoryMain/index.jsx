@@ -1,7 +1,7 @@
 import React from "react";
-import MainTop from "./MainTop";
+import MainTop from "../TopMain/Filter";
 import LeftMenu from "../LeftMenu";
-import MainBottom from "./MainBottom";
+import MainBottom from "../MainBottom";
 
 
 const CategoryMain = (props) => {

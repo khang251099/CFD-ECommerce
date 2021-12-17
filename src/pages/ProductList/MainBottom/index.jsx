@@ -1,6 +1,6 @@
 import React from "react";
-import PagnationContent from "../../../../componens/Pagnation";
-import moreProducts from "../../../../assets/icons/more-products.svg";
+import PagnationContent from "../../../componens/Pagnation";
+import moreProducts from "../../../assets/icons/more-products.svg";
 import "./style.scss";
 
 

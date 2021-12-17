@@ -1,8 +1,7 @@
 import React from "react";
 
-MainTop.propTypes = {};
 
-function MainTop(props) {
+const Filter = (props) => {
   return (
     <form>
       <div className="filter__item-wrap --top">
@@ -105,4 +104,4 @@ function MainTop(props) {
   );
 }
 
-export default MainTop;
+export default Filter;
