@@ -1,10 +1,7 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
-import ProductCard from "../../componens/ProductCard";
+import ProductCard from "../../../componens/ProductCard";
 import mockData from "../../../core/mockData/mock";
 import moreProducts from "../../../assets/icons/more-products.svg";
-SwiperCore.use([Autoplay]);
 
 const Headline = () => {
   const pro = mockData.data.product;
@@ -16,19 +13,15 @@ const Headline = () => {
         </h3>
         <div className="btn-flex">
           <p>Button</p>
-          <a href="#">
-            <img src={moreProducts} />
+          <a href="./">
+            <img src={moreProducts} alt="" />
           </a>
         </div>
       </div>
       <div className="product__item-wrap">
-        <Swiper slidesPerView={4} spaceBetween={30}>
-          {pro?.map((item) => (
-            <SwiperSlide key={item.id}>
-              <ProductCard data={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {pro?.slice(-4).map((item) => (
+          <ProductCard data={item} key={item.id} />
+        ))}
       </div>
     </>
   );

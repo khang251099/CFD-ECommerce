@@ -20,7 +20,7 @@ const LeftMenu = (props) => {
                 ))}
             </ul>
             <div className="more-cates">
-                <a href="#">
+                <a href="./">
                     <p>{btn}</p>
                 </a>
                 <img src={moreProducts} alt="" />

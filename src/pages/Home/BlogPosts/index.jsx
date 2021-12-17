@@ -61,8 +61,8 @@ const BlogPosts = () => {
             <div className="blog-info">
               <div className="avatar">
                 <img
-                  src=""
-                  alt=""
+                  src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="Author"
                   style={{ width: "32px", height: "32px", borderRadius: "50%" }}
                 />
               </div>
@@ -84,7 +84,9 @@ const BlogPosts = () => {
                 marginBottom: "24px",
               }}
             >
-              <img src={middleBlog} alt="" />
+              <a href="#">
+                <img src={middleBlog} alt="" />
+              </a>
             </div>
             <div className="middle-content">
               <div
@@ -108,12 +110,15 @@ const BlogPosts = () => {
                   Vagetable
                 </p>
               </div>
-              <h3
-                className="heading"
-                style={{ width: "289px", marginTop: "8px" }}
-              >
-                Which vegetable your family will love and want's eat each day
-              </h3>
+              <a href="#">
+                <h3
+                  className="heading"
+                  style={{ width: "289px", marginTop: "8px" }}
+                >
+                  Which vegetable your family will love and want's eat each day
+                </h3>
+              </a>
+
               <div className="blog-info --middle">
                 <p className="name">Author</p>
                 <p className="post-create-at">17.6.2020</p>
@@ -124,9 +129,11 @@ const BlogPosts = () => {
             <div className="blog__item-wrap">
               <div className="blog__item">
                 <div className="blog-heading">
-                  <h3 className="heading">
-                    Salat is kinda good start to your morning routines
-                  </h3>
+                  <a href="#">
+                    <h3 className="heading">
+                      Salat is kinda good start to your morning routines
+                    </h3>
+                  </a>
                 </div>
                 <div className="blog-info --middle">
                   <p className="name">Author</p>
@@ -135,9 +142,11 @@ const BlogPosts = () => {
               </div>
               <div className="blog__item">
                 <div className="blog-heading">
-                  <h3 className="heading">
-                    Salat is kinda good start to your morning routines
-                  </h3>
+                  <a href="#">
+                    <h3 className="heading">
+                      Salat is kinda good start to your morning routines
+                    </h3>
+                  </a>
                 </div>
                 <div className="blog-info --middle">
                   <p className="name">Author</p>
@@ -146,9 +155,11 @@ const BlogPosts = () => {
               </div>
               <div className="blog__item">
                 <div className="blog-heading">
-                  <h3 className="heading">
-                    Salat is kinda good start to your morning routines
-                  </h3>
+                  <a href="#">
+                    <h3 className="heading">
+                      Salat is kinda good start to your morning routines
+                    </h3>
+                  </a>
                 </div>
                 <div className="blog-info --middle">
                   <p className="name">Author</p>
@@ -160,35 +171,38 @@ const BlogPosts = () => {
         </div>
         <div className="blog-right" style={{ marginLeft: "140px" }}>
           <div className="blog-right-list">
-            <div
-              className="blog-right-item"
-            >
-              <img
-                src="https://media.istockphoto.com/photos/guinea-pigs-on-orange-chair-picture-id1302667734?b=1&k=20&m=1302667734&s=170667a&w=0&h=luoxfZshUn0H_Cya_wLk0-Ay6JYa7B4Q6brg0iG7BjM="
-                alt=""
-              />
+            <div className="blog-right-item">
+              <a href="#">
+                {" "}
+                <img
+                  src="https://media.istockphoto.com/photos/guinea-pigs-on-orange-chair-picture-id1302667734?b=1&k=20&m=1302667734&s=170667a&w=0&h=luoxfZshUn0H_Cya_wLk0-Ay6JYa7B4Q6brg0iG7BjM="
+                  alt=""
+                />
+              </a>
             </div>
-            <div
-              className="blog-right-item"
-            >
-              <img
-                src="https://media.istockphoto.com/photos/guinea-pigs-on-orange-chair-picture-id1302667734?b=1&k=20&m=1302667734&s=170667a&w=0&h=luoxfZshUn0H_Cya_wLk0-Ay6JYa7B4Q6brg0iG7BjM="
-                alt=""
-              />
+            <div className="blog-right-item">
+              <a href="#">
+                {" "}
+                <img
+                  src="https://media.istockphoto.com/photos/guinea-pigs-on-orange-chair-picture-id1302667734?b=1&k=20&m=1302667734&s=170667a&w=0&h=luoxfZshUn0H_Cya_wLk0-Ay6JYa7B4Q6brg0iG7BjM="
+                  alt=""
+                />
+              </a>
             </div>
-            <div
-              className="blog-right-item"
-            >
-              <img
-                src="https://media.istockphoto.com/photos/guinea-pigs-on-orange-chair-picture-id1302667734?b=1&k=20&m=1302667734&s=170667a&w=0&h=luoxfZshUn0H_Cya_wLk0-Ay6JYa7B4Q6brg0iG7BjM="
-                alt=""
-              />
+            <div className="blog-right-item">
+              <a href="#">
+                {" "}
+                <img
+                  src="https://media.istockphoto.com/photos/guinea-pigs-on-orange-chair-picture-id1302667734?b=1&k=20&m=1302667734&s=170667a&w=0&h=luoxfZshUn0H_Cya_wLk0-Ay6JYa7B4Q6brg0iG7BjM="
+                  alt=""
+                />
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default BlogPosts;

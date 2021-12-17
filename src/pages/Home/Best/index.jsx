@@ -1,9 +1,10 @@
 import React from "react";
-import ProductCard from "../../componens/ProductCard";
+import ProductCard from "../../../componens/ProductCard";
 import mockData from "../../../core/mockData/mock";
 
 const BestFamer = () => {
   const pro = mockData.data.product;
+  // console.log(pro);
   return (
     <div className="product__item-wrap">
       {pro?.slice(-3).map((item) => (

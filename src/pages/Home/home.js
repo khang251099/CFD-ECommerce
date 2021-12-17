@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import mockData from "../../core/mockData/mock";
 import labels from "../../utils/label";
-import CustomerCard from "../componens/CustomerCard";
 import BannerCate from "./BannerCate";
-import BestFamer from "./BestFamer";
-import BestSell from "./BestSale";
+import Best from "./Best";
 import BlogPost from "./BlogPosts";
 import Headline from "./Headline";
 import LeftMenu from "./LeftMenu";
@@ -38,7 +36,7 @@ const Home = () => {
               title={labels.LEFT_MENU.BEST_SALE}
               btn={labels.LEFT_MENU.BTN_PRO}
             />
-            <BestSell />
+            <Best />
           </section>
           <section className="best-selling --from">
             <LeftMenu
@@ -46,7 +44,7 @@ const Home = () => {
               title={labels.LEFT_MENU.BEST_FAMER}
               btn={labels.LEFT_MENU.BTN_PRO}
             />
-            <BestFamer />
+            <Best />
           </section>
           <section className="customer">
             <OurCustomer />

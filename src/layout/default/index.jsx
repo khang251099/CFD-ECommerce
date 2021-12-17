@@ -3,19 +3,29 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Home from "../../pages/Home/home";
 import Menu from "../Menu";
-
+import { Routes, Route } from "react-router-dom";
+import ProductList from "../../pages/ProductList";
+import ProductDetails from "../../pages/ProductDetails";
+import NotFound from "../NotFound";
+import Cart from "../../pages/Cart";
 
 const LayoutDefault = () => {
   return (
-    <React.Fragment>
+    <>
       <div className="layout-default">
         <Header />
         <Menu />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:id" element={<ProductList />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/check-cart" element={<Cart />} />
+          <Route path="/404" element={<NotFound />} />
+        </Routes>
         <Footer />
       </div>
-    </React.Fragment>
+    </>
   );
-}
+};
 
 export default LayoutDefault;

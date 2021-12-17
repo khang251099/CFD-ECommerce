@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
 import moreProducts from "../../../assets/icons/more-products.svg";
-import CustomerCard from "../../componens/CustomerCard";
+import CustomerCard from "../../../componens/CustomerCard";
 import mockData from "../../../core/mockData/mock";
 
 SwiperCore.use([Autoplay]);
