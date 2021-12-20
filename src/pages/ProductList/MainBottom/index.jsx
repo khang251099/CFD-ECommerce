@@ -1,11 +1,10 @@
 import React from "react";
 import PagnationContent from "../../../componens/Pagnation";
 import moreProducts from "../../../assets/icons/more-products.svg";
-import "./style.scss";
 
 
 const MainBottom = (props) => {
-  let { noOfPages, page, handleChange } = props;
+  let { noOfPages, page, handleChange, handleShowMore } = props;
   return (
     <div className="main-bottom">
       {/* <label>Page</label> */}
@@ -21,7 +20,7 @@ const MainBottom = (props) => {
         <PagnationContent noOfPages={noOfPages} page={page} handleChange={handleChange} />{" "}
       </div>
 
-      <div className="btn-show-more">
+      <div className="btn-show-more" onClick={handleShowMore}>
         <a href="#">
           <p>Show more products </p>
           <img src={moreProducts} alt="" />

@@ -12,7 +12,7 @@ const PaginationContent = (props) => {
         onChange={handleChange}
         defaultPage={1}
         color="primary"
-        size="large"
+        size="medium"
         showFirstButton
         showLastButton
       />

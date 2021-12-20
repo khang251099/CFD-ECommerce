@@ -24,10 +24,6 @@ const ProductCard = (props) => {
               alt=""
             />
           </Link>
-          {/* <a href="./">
-           
-          </a> */}
-
           {parseInt(data.discount) > 0 ? (
             <div className="sale-item">
               <p className="sale">-{data.discount}%</p>

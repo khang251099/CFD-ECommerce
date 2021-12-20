@@ -19,18 +19,6 @@ const Main = (props) => {
                     })}
             </div>
             <Divider />
-            {/* <Box component="span">
-                <Pagination
-                    count={noOfPages}
-                    page={page}
-                    onChange={handleChange}
-                    defaultPage={1}
-                    color="primary"
-                    size="large"
-                    showFirstButton
-                    showLastButton
-                />
-            </Box> */}
         </div>
     )
 }
