@@ -1,13 +1,26 @@
 import React from "react";
+import { add_cart } from '../../redux/actions/cart';
 // import rate from "../../../assets/images/rate.svg";
 import {
   Link,
 } from "react-router-dom";
+import { useNavigate } from 'react-router'
+import { useDispatch } from 'react-redux'
 
 const ProductCard = (props) => {
   let { data } = props;
   const priceSale =
     parseInt(data.discount) > 0 ? data.price * data.discount : 0;
+  let navigate = useNavigate();
+  const dispatch = useDispatch()
+
+  const addCart = (e) => {
+    e.preventDefault()
+
+    dispatch(add_cart(data.id, data.title, data.price, data.imgage))
+    navigate("/cart")
+  }
+
   return (
     <div className="product-item">
       <div className="products-card">
@@ -43,9 +56,9 @@ const ProductCard = (props) => {
           <div className="product-button">
             <p className="price">{data.price} USD</p>
             {priceSale > 0 ? <p className="price-sale">{priceSale}</p> : null}
-            <a href="./" className="btn-buy">
+            <Link to="" onClick={(e) => addCart(e)} className="btn-buy">
               <p>Buy now</p>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import mockData from "../../core/mockData/mock";
 import labels from "../../utils/label";
+import Cart from "../Cart";
 import BannerCate from "./BannerCate";
 import Best from "./Best";
 import BlogPost from "./BlogPosts";
@@ -55,6 +56,7 @@ const Home = () => {
           <section className="read-blog">
             <BlogPost />
           </section>
+          <Cart />
         </div>
       </div>
     </section>

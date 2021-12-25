@@ -1,14 +1,17 @@
 import React from "react";
-import Home from "./layout/default/index";
-import { Routes, Route, Router, Redirect, Navigate } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store, persistor } from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
 
 import "./styles/app.scss";
 import LayoutDefault from "./layout/default/index";
 function App() {
   return (
-    <React.Fragment>
-      <LayoutDefault />
-    </React.Fragment>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <LayoutDefault />
+      </PersistGate>
+    </Provider>
   );
 }
 

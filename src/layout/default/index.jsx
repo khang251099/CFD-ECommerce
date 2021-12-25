@@ -19,7 +19,7 @@ const LayoutDefault = () => {
           <Route path="/" element={<Home />} />
           <Route path="/category/:id" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/check-cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/404" element={<NotFound />} />
         </Routes>
         <Footer />
