@@ -5,7 +5,6 @@ import cart from "../../../assets/images/cart.svg";
 import Search from "../../Search";
 import mockData from "../../../core/mockData/mock";
 import SignIn from "../../../pages/Authentication/SignIn";
-import SignUp from "../../../pages/Authentication/SignUp";
 
 
 const HeaderBottom = (props) => {
@@ -36,32 +35,12 @@ const HeaderBottom = (props) => {
             <img src={user} alt="login" />
           </a>
         </div> */}
-        <nav>
-          <div
-            className="mainNav"
-            style={navBar ? { transform: "translateX(0)" } : null}
-          >
-            {switchPage ? <SignUp /> : <SignIn />}
-          </div>
-        </nav>
-        <button
-          onClick={handleNavBar}
-          className={`navToggle ${navBar ? "open" : null}`}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-        <div
-          onClick={handleNavBar.bind(this)}
-          className={`overlay ${navBar ? "open" : ""}`}
-        />
-      </div>
-      <div className="cart">
-        <a href="./">
-          <img src={cart} alt="cart" />
-        </a>
-        <span className="quality">4</span>
+        <div className="cart">
+          <a href="./">
+            <img src={cart} alt="cart" />
+          </a>
+          <span className="quality">4</span>
+        </div>
       </div>
     </div>
   );

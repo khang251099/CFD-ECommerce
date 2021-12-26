@@ -3,8 +3,19 @@ import React, { useState } from "react";
 import auth from "../../../utils/helpers/auth";
 import authApi from "../../../core/api/services/auth";
 import { set_user_info } from "../../../redux/actions/user"
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
+const schema = yup.object().shape({
+  email: yup.string().email().required(),
+  password: yup.string().min(8).max(32).required(),
+});
 function SignIn() {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    resolver: yupResolver(schema),
+  });
+
   const useFormInput = (initialValue) => {
     const [value, setValue] = useState(initialValue);
 
@@ -18,15 +29,8 @@ function SignIn() {
   };
 
   const [error, setError] = useState("");
-  const username = useFormInput("");
-  const password = useFormInput("");
 
-
-  const onFinish = () => {
-    const data = {
-      email: username.value,
-      password: password.value,
-    };
+  const onFinish = (data) => {
     authApi
       .clientLogin(data)
       .then(({ info, access_token }) => {
@@ -39,15 +43,35 @@ function SignIn() {
           setError(e.response.data.message);
         }
       });
+    console.log({ data });
+    reset();
   };
 
-
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
 
   return (
     <>
-      <div className="form-signin-text">
-        <p>ĐĂNG NHẬP</p>
-      </div>
+      <form onSubmit={handleSubmit(onFinish)}>
+        <h2>Lets sign you in.</h2>
+        <br />
+
+        <input {...register("email")} placeholder="email" type="email" required />
+        <p>{errors.email?.message}</p>
+        <br />
+
+        <input
+          {...register("password")}
+          placeholder="password"
+          type="password"
+          required
+        />
+        <p>{errors.password?.message}</p>
+        <br />
+
+        <button type="submit">Sign in</button>
+      </form>
     </>
   );
 }
