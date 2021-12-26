@@ -17,7 +17,7 @@ const ProductCard = (props) => {
   const addCart = (e) => {
     e.preventDefault()
 
-    dispatch(add_cart(data.id, data.title, data.price, data.imgage))
+    dispatch(add_cart(data))
     navigate("/cart")
   }
 
