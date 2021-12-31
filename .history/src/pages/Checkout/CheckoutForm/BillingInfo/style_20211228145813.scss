@@ -1,0 +1,16 @@
+.billing-info-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .billing-form-item {
+    margin-right: 20px;
+  }
+}
+div#demo-simple-select {
+  height: 40px;
+}
+
+span.MuiTypography-root.error-message.MuiTypography-colorTextSecondary {
+  color: red;
+  font-family: "Poppins";
+  font-style: italic;
+}

@@ -1,0 +1,23 @@
+.order-summary {
+  margin-left: 32px;
+  width: 468px;
+  height: 800px;
+  padding: 32px 16px;
+  background: #ffffff;
+  /* C1/D */
+
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+  border-radius: 12px;
+  .cart-popup {
+    background: unset;
+    box-shadow: unset;
+    padding: unset;
+    .popup-middle {
+      width: 100%;
+      .popup-left {
+        width: 30%;
+      }
+    }
+  }
+}

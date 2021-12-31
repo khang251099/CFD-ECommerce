@@ -1,0 +1,29 @@
+.method-logo {
+  display: flex;
+}
+
+.MuiAccordionSummary-expandIcon.Mui-expanded {
+  transform: unset !important;
+}
+.method-payment-logo {
+  margin-left: 12px;
+}
+.MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded {
+  margin-bottom: 16px;
+}
+fieldset.MuiFormControl-root {
+  margin-top: 32px;
+}
+.MuiFormControl-root.MuiTextField-root.card-number {
+  width: 638px;
+}
+
+.MuiAccordionDetails-root {
+  display: block !important;
+}
+
+.credit-input-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}

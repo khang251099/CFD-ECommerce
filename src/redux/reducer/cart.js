@@ -8,11 +8,10 @@ const reducer = (state = initCart, action) => {
       let newState;
       const { payload } = action;
       const product = payload.product;
-      console.log(product);
       if (state.find((idx) => idx.id === product.id)) {
         newState = state.map((idx) => {
           if (idx.id === product.id) {
-            idx.count += 1;
+            idx.count++;
           }
           return idx;
         });

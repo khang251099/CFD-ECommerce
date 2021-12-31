@@ -1,0 +1,34 @@
+.search__item {
+  &:not(first-child) {
+    margin-bottom: 15px;
+  }
+  display: flex;
+  align-items: center;
+  &-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  &-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+
+    /* C1/A */
+
+    color: #151515;
+  }
+  &-desc {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* C1/B */
+
+    color: #575757;
+  }
+}
