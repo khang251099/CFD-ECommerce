@@ -1,0 +1,26 @@
+.cart__item-wrap {
+  .title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 52px;
+    margin-top: 30px;
+    color: #151515;
+    text-align: center;
+  }
+}
+.cart-box-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  h4 {
+    text-align: center;
+    font-family: "Poppins" !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    color: #151515;
+  }
+}

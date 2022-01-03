@@ -1,0 +1,59 @@
+.wishList__item-wrap {
+  .title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 52px;
+
+    /* C1/A */
+
+    color: #151515;
+    text-align: center;
+  }
+}
+.wishList__item {
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .heading {
+      font-size: 15px;
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+  }
+  &-pro {
+    display: flex;
+    align-items: center;
+    a {
+      img {
+        width: 25px;
+      }
+    }
+    img {
+      width: 150px;
+    }
+  }
+  &-price {
+    display: flex;
+    align-items: center;
+    .price-sale {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      text-decoration-line: line-through;
+
+      /* C4/B */
+
+      color: #c7522d;
+    }
+    .price {
+    }
+  }
+}

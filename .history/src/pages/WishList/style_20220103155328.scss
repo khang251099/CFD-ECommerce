@@ -1,0 +1,33 @@
+.wishList__item-wrap {
+  .title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 52px;
+
+    /* C1/A */
+
+    color: #151515;
+    text-align: center;
+  }
+}
+.wishList__item {
+  display: flex;
+  justify-content: space-between;
+  .heading {
+    font-size: 15px;
+  }
+  &-pro {
+    display: flex;
+    align-items: center;
+    a {
+      img {
+        width: 20px;
+      }
+    }
+    img {
+      width: 150px;
+    }
+  }
+}
