@@ -4,10 +4,9 @@ import PopupCart from "../../../pages/PopupCart";
 import { add_cart } from "../../../redux/actions/cart";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import cart from "../../../assets/images/cart.svg";
 
 import Popup from "reactjs-popup";
-import "./style.scss";
+
 import "reactjs-popup/dist/index.css";
 
 const FooterBottom = () => {

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import cart from "../../../assets/images/cart.svg";
 
 import Popup from "reactjs-popup";
-import "./style.scss";
+
 import "reactjs-popup/dist/index.css";
 
 const FooterBottom = () => {

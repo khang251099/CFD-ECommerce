@@ -1,0 +1,12 @@
+.footer {
+  position: relative;
+  .cart {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    z-index: 9999;
+    .quality {
+      //   background-color: #e5704b;
+    }
+  }
+}

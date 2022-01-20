@@ -38,17 +38,26 @@
       &:before {
         opacity: 0.4;
         transition: 0.4s;
+
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
       }
       a {
+        display: block;
         img {
-          transform: translate(-50%, -50%) scale(1.05);
-          -ms-transform: scale(1.05); /* IE 9 */
-          -webkit-transform: scale(1.05); /* Safari 3-8 */
-
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5);
           transition: 0.4s;
         }
       }
     }
+    //   &:before {
+    //     opacity: 0.4;
+    //     transition: 0.4s;
+    //   }
+    // }
 
     &:before {
       content: "";
@@ -57,7 +66,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-color: transparent;
+      background-color: #0e0e0e;
       opacity: 0;
       z-index: 10;
       transition: 0.4s;

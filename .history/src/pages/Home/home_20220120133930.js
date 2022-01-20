@@ -20,6 +20,7 @@ const Home = () => {
   const listCate = mockData.data.category;
 
   const pro = mockData.data.product;
+  // console.log(data.quantity);
   return (
     <section className="home-wrapper">
       <div className="container-fluid">

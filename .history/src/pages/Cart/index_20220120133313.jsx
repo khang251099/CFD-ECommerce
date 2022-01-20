@@ -19,13 +19,13 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.scss";
 
-const Cart = (props) => {
+const Cart = () => {
   toast.configure({ autoClose: 1000 });
   const cart = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
   const [remove, setRemove] = useState("");
   const dispatch = useDispatch();
-
+  // const [value, setValue] = useState("");
   const removeCart = async (e, item) => {
     e.preventDefault();
     dispatch(remove_cart(item));
@@ -57,7 +57,7 @@ const Cart = (props) => {
 
   const deleteCart = async () => {
     await dispatch(delete_cart(remove));
-    toast.success("This product deleted from cart");
+    toast.success("Do u wanna delete this product from cart");
   };
   return (
     <div className="container-fluid">

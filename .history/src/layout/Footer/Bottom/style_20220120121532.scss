@@ -1,0 +1,24 @@
+.footer {
+  position: relative;
+  .cart {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    // z-index: 9999;
+    .quality {
+      //   background-color: #e5704b;
+    }
+    &::before {
+      content: "";
+      color: #ffffff;
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      right: 23px;
+      top: 30px;
+      background-color: #e5704b;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+    }
+  }
+}

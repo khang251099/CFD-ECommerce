@@ -19,13 +19,13 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.scss";
 
-const Cart = (props) => {
+const Cart = () => {
   toast.configure({ autoClose: 1000 });
   const cart = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
   const [remove, setRemove] = useState("");
   const dispatch = useDispatch();
-
+  // const [value, setValue] = useState("");
   const removeCart = async (e, item) => {
     e.preventDefault();
     dispatch(remove_cart(item));
@@ -52,12 +52,16 @@ const Cart = (props) => {
     : 0;
 
   const handleOnChange = (e, item) => {
+    // setValue(e.target.value);
     dispatch(update_quantity(item, e.target.value));
   };
-
-  const deleteCart = async () => {
-    await dispatch(delete_cart(remove));
-    toast.success("This product deleted from cart");
+  const handleCart = (e, item) => {};
+  const deleteCart = async (item) => {
+    toast.warning("Do u wanna delete this product from cart");
+    await dispatch(delete_cart(item));
+    // setTimeout(() => {
+    //   toast.success("This product deleted from cart successfully");
+    // }, 1500);
   };
   return (
     <div className="container-fluid">
@@ -137,10 +141,10 @@ const Cart = (props) => {
                   </DialogTitle>
 
                   <DialogActions>
-                    <a href="#" onClick={handleClose} className="btn-cancel">
+                    <a href="#" className="btn-cancel">
                       Cancel
                     </a>
-                    <a href="#" onClick={deleteCart} className="btn-delete">
+                    <a href="#" className="btn-delete">
                       Delete
                     </a>
                   </DialogActions>

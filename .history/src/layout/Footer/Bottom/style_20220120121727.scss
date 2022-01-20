@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  .cart {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+
+    .quality {
+      color: #ffffff;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   z-index: 999;
+    }
+    &::before {
+      content: "";
+      color: #ffffff;
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      right: 23px;
+      top: 30px;
+      background-color: #e5704b;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      z-index: -10;
+    }
+  }
+}
