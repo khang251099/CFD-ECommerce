@@ -3,9 +3,7 @@ import PagnationContent from "../../../components/Pagnation";
 import moreProducts from "../../../assets/icons/more-products.svg";
 
 const MainBottom = (props) => {
-  let { noOfPages, page, handleChange, handleShowMore, totalProduct } = props;
-  console.log("no of page main bottom ", noOfPages);
-
+  let { noOfPages, page, handleChange, handleShowMore } = props;
   return (
     <div className="main-bottom">
       <div
@@ -18,7 +16,7 @@ const MainBottom = (props) => {
       >
         <p style={{ fontFamily: "Open Sans", fontize: "12px" }}>Page</p>
         <PagnationContent
-          count={noOfPages}
+          noOfPages={noOfPages}
           page={page}
           handleChange={handleChange}
         />
@@ -49,7 +47,7 @@ const MainBottom = (props) => {
               color: "#A9A9A9",
             }}
           >
-            {totalProduct}
+            117
           </span>
         </div>
         <a href="#">

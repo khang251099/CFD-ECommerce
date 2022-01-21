@@ -22,6 +22,7 @@ const ProductList = (props) => {
       console.log("failed to fetch data", error);
     }
   }, []);
+
   const [page, setPage] = useState(1);
 
   const [itemsPerPage, setItemsPerPage] = useState(9);
@@ -30,7 +31,6 @@ const ProductList = (props) => {
     Math.ceil(pro.length / itemsPerPage)
   );
 
-  console.log("no of pages", Math.ceil(pro.length / itemsPerPage));
   const handleChange = (event, value) => {
     setPage(value);
   };
@@ -44,7 +44,7 @@ const ProductList = (props) => {
   return (
     <div className="container-fluid">
       <div className="category-list">
-        <MainTop totalProduct={pro.length} />
+        <MainTop />
         <div className="mainCenter__item-wrap">
           <LeftMenu />
           <Main product={pro} itemsPerPage={itemsPerPage} page={page} />
@@ -54,7 +54,6 @@ const ProductList = (props) => {
           page={page}
           handleChange={handleChange}
           handleShowMore={handleShowMore}
-          totalProduct={pro.length}
         />
       </div>
     </div>

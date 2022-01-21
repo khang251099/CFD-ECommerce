@@ -11,6 +11,18 @@ const ProductList = (props) => {
   const { id } = useParams();
 
   const [pro, setPro] = useState([]);
+  const [page, setPage] = useState(1);
+
+  const [itemsPerPage, setItemsPerPage] = useState(9);
+  console.log("pro page", pro.length);
+  const [noOfPages, setNoOfPages] = useState(
+    Math.ceil(pro.length / itemsPerPage)
+  );
+
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
   useEffect(() => {
     try {
       const fetchData = async () => {
@@ -22,18 +34,6 @@ const ProductList = (props) => {
       console.log("failed to fetch data", error);
     }
   }, []);
-  const [page, setPage] = useState(1);
-
-  const [itemsPerPage, setItemsPerPage] = useState(9);
-  console.log("pro page", pro.length);
-  const [noOfPages, setNoOfPages] = useState(
-    Math.ceil(pro.length / itemsPerPage)
-  );
-
-  console.log("no of pages", Math.ceil(pro.length / itemsPerPage));
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
 
   const handleShowMore = (event, value) => {
     event.preventDefault();
@@ -44,7 +44,7 @@ const ProductList = (props) => {
   return (
     <div className="container-fluid">
       <div className="category-list">
-        <MainTop totalProduct={pro.length} />
+        <MainTop />
         <div className="mainCenter__item-wrap">
           <LeftMenu />
           <Main product={pro} itemsPerPage={itemsPerPage} page={page} />
@@ -54,7 +54,6 @@ const ProductList = (props) => {
           page={page}
           handleChange={handleChange}
           handleShowMore={handleShowMore}
-          totalProduct={pro.length}
         />
       </div>
     </div>

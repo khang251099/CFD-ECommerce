@@ -44,17 +44,16 @@ const ProductList = (props) => {
   return (
     <div className="container-fluid">
       <div className="category-list">
-        <MainTop totalProduct={pro.length} />
+        <MainTop />
         <div className="mainCenter__item-wrap">
           <LeftMenu />
           <Main product={pro} itemsPerPage={itemsPerPage} page={page} />
         </div>
         <MainBottom
-          noOfPages={noOfPages}
+          count={noOfPages}
           page={page}
           handleChange={handleChange}
           handleShowMore={handleShowMore}
-          totalProduct={pro.length}
         />
       </div>
     </div>

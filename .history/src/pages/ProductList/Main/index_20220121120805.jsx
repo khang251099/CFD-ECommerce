@@ -4,6 +4,8 @@ import { Divider } from "@material-ui/core";
 
 const Main = (props) => {
   let { product, page, itemsPerPage } = props;
+  // const listCate = product.map((item) => console.log(item));
+  // console.log("product list cate", product);
 
   return (
     <div className="item-right">
@@ -12,9 +14,9 @@ const Main = (props) => {
           ?.slice((page - 1) * itemsPerPage, page * itemsPerPage)
           .map((item) => {
             return (
-              <React.Fragment>
+              <>
                 <ProductCard data={item} key={item.id} />
-              </React.Fragment>
+              </>
             );
           })}
       </div>

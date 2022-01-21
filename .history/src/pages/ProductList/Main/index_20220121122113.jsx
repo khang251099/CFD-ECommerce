@@ -12,9 +12,9 @@ const Main = (props) => {
           ?.slice((page - 1) * itemsPerPage, page * itemsPerPage)
           .map((item) => {
             return (
-              <React.Fragment>
+              <>
                 <ProductCard data={item} key={item.id} />
-              </React.Fragment>
+              </>
             );
           })}
       </div>
