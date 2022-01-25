@@ -1,30 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import mockData from "../../../core/mockData/mock";
 import Categories from "./Categories";
 import Brands from "./Brands";
 import Rating from "./Rating";
 import Range from "./Range";
-import categoryApi from "../../../core/api/category";
 
-const LeftMenu = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    try {
-      const fetchData = async () => {
-        const cateList = await categoryApi.getAll();
-        setData(cateList);
-      };
-      fetchData();
-    } catch (error) {
-      console.log("Failed to fetch data", error);
-    }
-  }, []);
+const LeftMenu = (props) => {
+  const data = mockData.data.category;
+  let {rangeSelector, value} = props;
   return (
     <div className="item-left">
       <Categories data={data} />
       <Brands data={data} />
       <Rating />
-      <Range product={data} />
+      <Range rangeSelector={rangeSelector} value ={value}/>
     </div>
   );
 };

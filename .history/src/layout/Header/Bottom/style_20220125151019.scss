@@ -1,0 +1,69 @@
+.dropdown {
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  margin: 30px;
+  background: rgb(248, 248, 248);
+  border: solid 1px rgb(222, 222, 222);
+  width: 320px;
+  display: grid;
+  cursor: pointer;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "icon"
+    "menu";
+}
+dropdown.closed {
+  grid-template-areas: "icon";
+}
+.icon {
+  grid-area: icon;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.icon span {
+  transition: all 0.2s ease-in-out;
+  transform: rotateX(180deg) rotateY(180deg);
+  color: rgb(252, 102, 102);
+}
+.closed .icon span {
+  transform: rotateX(0deg);
+  color: black;
+}
+.menu {
+  grid-area: menu;
+  transition: all 0.2s ease-in-out;
+  height: 228px;
+}
+.menu li {
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  padding: 1rem 0.4rem;
+  border-top: solid 1px rgb(202, 202, 202);
+}
+.menu li:hover {
+  background: rgb(252, 102, 102);
+}
+.menu li:hover a {
+  color: white;
+}
+
+.dropdown.closed .menu {
+  height: 0;
+}
+#output {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  background: rgb(242, 242, 242);
+  padding: 1rem;
+  width: 350px;
+  border: solid 1px rgb(222, 222, 222);
+}
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}

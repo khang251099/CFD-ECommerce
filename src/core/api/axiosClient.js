@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:7777",
+  baseURL: "https://cfd-json.herokuapp.com",
   headers: {
     "Content-Type": "application/json",
   },

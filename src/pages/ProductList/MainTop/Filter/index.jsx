@@ -2,29 +2,30 @@ import React from "react";
 
 
 const Filter = (props) => {
+  const {handleFilter, checked, checkedMin, checkedZToA, checkedAToZ} = props
   return (
     <form>
       <div className="filter__item-wrap --top">
         <div className="filter__item">
           <div className="filter-text">
-            <input type="radio" />
+            <input type="radio" checked={checked} onClick={() => handleFilter(!checked, 'max')} />
             <label>
-              <p>Filter text</p>
+              <p>Filter max price</p>
             </label>
           </div>
           <div className="filter-text">
-            <input type="radio" />
+            <input type="radio" checked={checkedMin} onClick={() => handleFilter(!checkedMin, 'min')} />
             <label>
-              <p>Filter text</p>
+              <p>Filter min price</p>
             </label>
           </div>
         </div>
 
         <div className="filter__item">
           <div className="filter-text">
-            <input type="checkbox" value="Nbm" />
+            <input type="checkbox" value="Nbm" checked={checkedAToZ} onClick={() => handleFilter(!checkedAToZ, 'AToZ')} />
             <label>
-              <p>Filter text</p>
+              <p>Filter A to Z</p>
             </label>
             <div className="value">
               <label className="lb-value">
@@ -35,9 +36,9 @@ const Filter = (props) => {
         </div>
         <div className="filter__item">
           <div className="filter-text">
-            <input type="checkbox" value="Nbm" />
+            <input type="checkbox" value="Nbm" checked={checkedZToA} onClick={() => handleFilter(!checkedZToA, 'ZToA')} />
             <label>
-              <p>Filter text</p>
+              <p>Filter Z to A</p>
             </label>
             <div className="value">
               <label className="lb-value">
@@ -47,7 +48,7 @@ const Filter = (props) => {
           </div>
         </div>
 
-        <div className="filter__item">
+        {/* <div className="filter__item">
           <div className="filter-text">
             <input type="checkbox" value="12" />
             <label>
@@ -66,13 +67,13 @@ const Filter = (props) => {
               <option value="Option 2">Option 2</option>
             </select>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="applied-filter">
+      {/* <div className="applied-filter">
         <label htmlFor="applied filters">Applied filters</label>
         <div>
-          {/* <Stack spacing={3} sx={{ width: 500 }}>
+          <Stack spacing={3} sx={{ width: 500 }}>
             <Autocomplete
               multiple
               id="tags-filled"
@@ -97,9 +98,9 @@ const Filter = (props) => {
                 />
               )}
             />
-          </Stack> */}
+          </Stack>
         </div>
-      </div>
+      </div> */}
     </form>
   );
 }

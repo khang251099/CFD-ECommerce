@@ -1,0 +1,44 @@
+.loading-page {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #252525;
+  h2 {
+    font-size: 4em;
+    color: #222;
+    text-transform: uppercase;
+    border-bottom: 5px solid #222;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    position: relative;
+    display: block;
+    &:before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #03a9f4;
+      overflow: hidden;
+      border-bottom: 5px solid #03a9f4;
+      -webkit-animation: loading 10s linear infinite;
+      animation: loading 10s linear infinite;
+    }
+  }
+}
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
