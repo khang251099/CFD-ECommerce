@@ -43,16 +43,29 @@
   width: 100%;
   .item__left {
     // margin-right: 156px;
-    width: 26%;
+    width: 23%;
+    // @media screen and (width: 1280px) {
+    //   width: 23%;
+    // }
+    @media screen and (width: 1280px) {
+      width: 23%;
+    }
   }
   .item__right {
     display: flex;
+    @media screen and (max-width: 1199px) {
+      margin-left: 40px;
+    }
+
     .banner-item {
       margin-right: 35px;
       width: 420px;
       height: 280px;
       border-radius: 12px;
       background-color: #f4f8ec;
+      @media screen and (max-width: 1199px) {
+        width: 330px;
+      }
       .banner__content {
         margin-left: 35px;
         margin-top: 48px;

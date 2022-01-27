@@ -42,7 +42,7 @@ const Range = (props) => {
             valueLabelDisplay="auto"
           />
         </Box>
-        <Grid
+        {/* <Grid
           container
           direction="row"
           justifyContent="flex-start"
@@ -85,7 +85,7 @@ const Range = (props) => {
               {errors.firstname?.message}
             </Typography>
           </FormControl>
-        </Grid>
+        </Grid> */}
       </div>
     </>
   );

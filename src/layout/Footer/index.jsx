@@ -18,6 +18,7 @@ function Footer(props) {
             fontWeight: "400",
             lineHeight: "19px",
             color: "#151515",
+            paddingBottom: "20px",
           }}
         >
           Copyright &copy; 2020 petrbilek.com{" "}

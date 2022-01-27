@@ -169,7 +169,7 @@ const BlogPosts = () => {
             </div>
           </div>
         </div>
-        <div className="blog-right" style={{ marginLeft: "140px" }}>
+        <div className="blog-right">
           <div className="blog-right-list">
             <div className="blog-right-item">
               <a href="#">

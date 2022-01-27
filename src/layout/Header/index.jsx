@@ -11,7 +11,7 @@ function Header(props) {
     <header className="header">
       <div className="container-fluid">
         <HeaderTop />
-        <HeaderBottom user={user} />
+        <HeaderBottom {...user} />
       </div>
     </header>
   );

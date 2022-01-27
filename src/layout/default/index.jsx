@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
 import Home from "../../pages/Home/home";
@@ -18,6 +18,29 @@ import firebase from "firebase/compat/app";
 import { useDispatch, useSelector } from "react-redux";
 import { GuardSpinner } from "react-spinners-kit";
 import "./style.scss";
+import { isLoaded, isEmpty } from "react-redux-firebase";
+
+export function PrivateRoute({ children, ...rest }) {
+  const auth = useSelector((state) => state.firebase.auth);
+
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        isLoaded(auth) && !isEmpty(auth) ? (
+          children
+        ) : (
+          <Navigate
+            to={{
+              pathname: "/login",
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
+}
 const LayoutDefault = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -29,9 +52,10 @@ const LayoutDefault = () => {
       setUser(user);
     }
   });
+
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 8000);
+    setTimeout(() => setLoading(false), 6000);
   }, []);
   return (
     <>
@@ -45,15 +69,16 @@ const LayoutDefault = () => {
               <Route path="/category/:id" element={<ProductList />} />
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/cart" element={<Cart cart={cart} />} />
+              <Route path="/blog" element={<BlogList />} />
               <Route path="/login" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/blog" element={<BlogList />} />
               <Route
                 path="/wishlist"
                 element={<WishList wishList={wishList} />}
               />
+
               <Route path="/profile" element={<Profile />} />
+              <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

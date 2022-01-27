@@ -1,6 +1,10 @@
 .headline {
-    .product__item-wrap {
-      grid-template-columns: repeat(4, 1fr) !important;
+  .product__item-wrap {
+    grid-template-columns: repeat(4, 1fr) !important;
+    .product-item {
+      @media screen and (min-width: 1280px) {
+        margin-left: unset;
+      }
     }
   }
-  
+}

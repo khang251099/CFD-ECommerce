@@ -14,7 +14,6 @@
 @import "./modules/breadcrumb";
 @import "./modules/snackbar";
 
-
 //layout
 @import "./layout/layout";
 @import "./layout/header";
@@ -26,7 +25,4 @@
 
 //pages
 @import "./pages/home/home";
-@import './pages/productList/index.scss';
-
-
-
+@import "./pages/productList/index.scss";

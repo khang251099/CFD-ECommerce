@@ -13,11 +13,11 @@ import "./style.scss";
 import { compose } from "redux";
 import { firebaseConnect } from "react-redux-firebase";
 import firebase from "firebase/compat/app";
+import { isLoaded, isEmpty } from "react-redux-firebase";
 const HeaderBottom = (props) => {
   const { user } = props;
-  const [data, setData] = useState([]);
 
-  const navigate = useNavigate();
+  const [data, setData] = useState([]);
 
   const profile = useSelector((state) => state.firebase.profile);
 
@@ -32,12 +32,6 @@ const HeaderBottom = (props) => {
       console.log("failed to fetch data", error);
     }
   }, []);
-
-  const [navBar, setNavBar] = useState(false);
-
-  const handleNavBar = () => {
-    setNavBar(!navBar);
-  };
 
   const open = useRef(null);
 
@@ -68,7 +62,7 @@ const HeaderBottom = (props) => {
           </Link>
         </div>
         <div>
-          {_.isEmpty(user) ? (
+          {_.isEmpty(profile) ? (
             <div className="login" style={{ marginLeft: "40px" }}>
               <Link to="/login">
                 <img src={login} alt="login" />
@@ -85,7 +79,7 @@ const HeaderBottom = (props) => {
                     <Link to="/profile">Profile</Link>
                   </div>
                   <span onClick={(e) => openNav(e)}>
-                    <p className="say-hi">Chào {user._delegate.email}</p>
+                    <p className="say-hi">Chào {profile.name}</p>
                   </span>
                 </>
               ) : (

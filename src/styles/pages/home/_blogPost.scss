@@ -99,8 +99,16 @@
 }
 
 .blog__item-wrap {
+  @media screen and (max-width: 1199px) {
+    // display: none;
+  }
   .blog__item {
     margin-bottom: 58px;
+  }
+}
+.blog-middle-right {
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
 }
 
@@ -119,5 +127,19 @@
 .home__item-wrap {
   .read-blog-bottom {
     grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+.blog-right {
+  margin-left: 140px;
+  @media screen and (max-width: 1199px) {
+    margin-left: 55px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 75px;
+  }
+}
+.blog-content {
+  @media screen and (max-width: 1199px) {
+    width: 465px;
   }
 }
