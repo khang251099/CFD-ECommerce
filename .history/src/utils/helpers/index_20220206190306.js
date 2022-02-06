@@ -41,4 +41,12 @@ function filterMinToMaxPrice(arr) {
   });
 }
 
-export { filterByCate, filterById, filterAtoZ, filterZtoA, totalCart };
+export {
+  filterByCate,
+  filterById,
+  filterAtoZ,
+  filterZtoA,
+  filterMaxToMinPrice,
+  filterMinToMaxPrice,
+  totalCart,
+};

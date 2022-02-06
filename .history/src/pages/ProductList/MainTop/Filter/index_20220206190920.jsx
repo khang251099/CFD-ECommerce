@@ -13,7 +13,7 @@ const Filter = (props) => {
               onClick={() => handleFilter(!checked, "max")}
             />
             <label>
-              <p>Filter max price to min price</p>
+              <p>Filter max price</p>
             </label>
           </div>
           <div className="filter-text">
@@ -23,7 +23,7 @@ const Filter = (props) => {
               onClick={() => handleFilter(!checkedMin, "min")}
             />
             <label>
-              <p>Filter min price to max price</p>
+              <p>Filter min price</p>
             </label>
           </div>
         </div>

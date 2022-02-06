@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import mockData from "../../core/mockData/mock";
 import {
+  filterByRangePrice,
   filterMaxToMinPrice,
   filterMinToMaxPrice,
   filterAtoZ,
@@ -14,7 +15,6 @@ import Main from "./Main";
 import MainBottom from "./MainBottom";
 import MainTop from "./MainTop";
 import productApi from "../../core/api/product";
-import { isError } from "lodash";
 
 const ProductList = (props) => {
   const { id } = useParams();
@@ -32,23 +32,6 @@ const ProductList = (props) => {
   const [number, setNumber] = useState(x);
   const [data, setData] = useState([]);
   const [noOfPages, setNoOfPages] = useState(3);
-  const totalPrice =
-    pro.discount > 0
-      ? parseInt(pro.discount * pro.price) / 100
-      : parseInt(pro.price);
-
-  function filterMaxToMinPrice(arr) {
-    return arr.sort(function (a, b) {
-      return a.price - b.price;
-    });
-  }
-
-  function filterMinToMaxPrice(arr) {
-    return arr.sort(function (a, b) {
-      return b.price - a.price;
-    });
-  }
-
   useEffect(() => {
     try {
       const fetchData = async () => {
@@ -83,11 +66,6 @@ const ProductList = (props) => {
     setValue(newValue);
     setPro(filterByRangePrice(value));
   };
-  console.log(
-    pro.map((item) => {
-      return item.price;
-    })
-  );
 
   const handleFilter = (check, name) => {
     switch (name) {
@@ -109,7 +87,7 @@ const ProductList = (props) => {
           setCheckedZToA(false);
           setChecked(false);
           check === true
-            ? setPro(filterMinToMaxPrice(pro))
+            ? setPro(filterMinToMaxPrice(pro.price))
             : console.log("check false");
         }
         return pro;

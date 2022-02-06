@@ -1,41 +1,29 @@
 import React from "react";
 
+
 const Filter = (props) => {
-  const { handleFilter, checked, checkedMin, checkedZToA, checkedAToZ } = props;
+  const {handleFilter, checked, checkedMin, checkedZToA, checkedAToZ} = props
   return (
     <form>
       <div className="filter__item-wrap --top">
         <div className="filter__item">
           <div className="filter-text">
-            <input
-              type="radio"
-              checked={checked}
-              onClick={() => handleFilter(!checked, "max")}
-            />
+            <input type="radio" checked={checked} onClick={() => handleFilter(!checked, 'max')} />
             <label>
-              <p>Filter max price to min price</p>
+              <p>Filter max price</p>
             </label>
           </div>
           <div className="filter-text">
-            <input
-              type="radio"
-              checked={checkedMin}
-              onClick={() => handleFilter(!checkedMin, "min")}
-            />
+            <input type="radio" checked={checkedMin} onClick={() => handleFilter(!checkedMin, 'min')} />
             <label>
-              <p>Filter min price to max price</p>
+              <p>Filter min price</p>
             </label>
           </div>
         </div>
 
         <div className="filter__item">
           <div className="filter-text">
-            <input
-              type="checkbox"
-              value="Nbm"
-              checked={checkedAToZ}
-              onClick={() => handleFilter(!checkedAToZ, "AToZ")}
-            />
+            <input type="checkbox" value="Nbm" checked={checkedAToZ} onClick={() => handleFilter(!checkedAToZ, 'AToZ')} />
             <label>
               <p>Filter A to Z</p>
             </label>
@@ -48,12 +36,7 @@ const Filter = (props) => {
         </div>
         <div className="filter__item">
           <div className="filter-text">
-            <input
-              type="checkbox"
-              value="Nbm"
-              checked={checkedZToA}
-              onClick={() => handleFilter(!checkedZToA, "ZToA")}
-            />
+            <input type="checkbox" value="Nbm" checked={checkedZToA} onClick={() => handleFilter(!checkedZToA, 'ZToA')} />
             <label>
               <p>Filter Z to A</p>
             </label>
@@ -120,6 +103,6 @@ const Filter = (props) => {
       </div> */}
     </form>
   );
-};
+}
 
 export default Filter;

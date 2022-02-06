@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import mockData from "../../core/mockData/mock";
 import {
+  filterByRangePrice,
   filterMaxToMinPrice,
   filterMinToMaxPrice,
   filterAtoZ,
@@ -32,23 +33,6 @@ const ProductList = (props) => {
   const [number, setNumber] = useState(x);
   const [data, setData] = useState([]);
   const [noOfPages, setNoOfPages] = useState(3);
-  const totalPrice =
-    pro.discount > 0
-      ? parseInt(pro.discount * pro.price) / 100
-      : parseInt(pro.price);
-
-  function filterMaxToMinPrice(arr) {
-    return arr.sort(function (a, b) {
-      return a.price - b.price;
-    });
-  }
-
-  function filterMinToMaxPrice(arr) {
-    return arr.sort(function (a, b) {
-      return b.price - a.price;
-    });
-  }
-
   useEffect(() => {
     try {
       const fetchData = async () => {

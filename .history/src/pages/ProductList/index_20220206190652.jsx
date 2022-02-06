@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import mockData from "../../core/mockData/mock";
 import {
+  filterByRangePrice,
   filterMaxToMinPrice,
   filterMinToMaxPrice,
   filterAtoZ,
@@ -97,7 +98,7 @@ const ProductList = (props) => {
         setCheckedAToZ(false);
         setCheckedZToA(false);
         check === true
-          ? setPro(filterMaxToMinPrice(pro))
+          ? setPro(filterMaxToMinPrice(totalPrice))
           : console.log("check false");
         return pro;
       }
@@ -109,7 +110,7 @@ const ProductList = (props) => {
           setCheckedZToA(false);
           setChecked(false);
           check === true
-            ? setPro(filterMinToMaxPrice(pro))
+            ? setPro(filterMinToMaxPrice(totalPrice))
             : console.log("check false");
         }
         return pro;
