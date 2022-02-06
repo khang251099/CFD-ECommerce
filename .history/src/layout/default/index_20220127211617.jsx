@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -22,30 +22,25 @@ import { isLoaded, isEmpty } from "react-redux-firebase";
 
 export function PrivateRoute({ children, ...rest }) {
   const auth = useSelector((state) => state.firebase.auth);
-  if (auth?.stsTokenManager?.accessToken) {
-    return <Route path="/blog">children</Route>;
-  }
 
-  return <Route path="/login">children</Route>;
-  // return (
-  //   <Route
-  //     {...rest}
-  //     render={({ location }) =>
-  //       isLoaded(auth) && !isEmpty(auth) ? (
-  //         children
-  //       ) : (
-  //         <Navigate
-  //           to={{
-  //             pathname: "/login",
-  //             state: { from: location },
-  //           }}
-  //         />
-  //       )
-  //     }
-  //   />
-  // );
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        isLoaded(auth) && !isEmpty(auth) ? (
+          children
+        ) : (
+          <Navigate
+            to={{
+              pathname: "/login",
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
 }
-
 const LayoutDefault = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -60,39 +55,18 @@ const LayoutDefault = () => {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 6000);
   }, []);
   const auth = useSelector((state) => state.firebase.auth);
-
-  const topRef = useRef(null);
-
-  const handleClickToTop = (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 1000) {
-        topRef.current.classList.add("show");
-      } else {
-        topRef.current.classList.remove("show");
-      }
-    });
-  }, []);
-
+  console.log(auth);
   return (
     <>
       <div className="layout-default">
         {loading === false ? (
           <>
-            <Header
-              user={user}
-              className={scroll ? "top-btn show" : "top-btn "}
-            />
+            <Header user={user} />
             <Menu />
+            cho dang nhp o dau
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/category/:id" element={<ProductList />} />
@@ -111,13 +85,6 @@ const LayoutDefault = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-            <div
-              className="top-btn"
-              ref={topRef}
-              onClick={(e) => handleClickToTop(e)}
-            >
-              <i className="fas fa-arrow-up"></i>
-            </div>
           </>
         ) : (
           <div className="loading-page">

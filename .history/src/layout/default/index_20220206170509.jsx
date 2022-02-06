@@ -88,11 +88,9 @@ const LayoutDefault = () => {
       <div className="layout-default">
         {loading === false ? (
           <>
-            <Header
-              user={user}
-              className={scroll ? "top-btn show" : "top-btn "}
-            />
+            <Header user={user} />
             <Menu />
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/category/:id" element={<ProductList />} />
@@ -105,19 +103,14 @@ const LayoutDefault = () => {
                 path="/wishlist"
                 element={<WishList wishList={wishList} />}
               />
-
+              <PrivateRoute path="/login">
+                <SignIn />
+              </PrivateRoute>
               <Route path="/profile" element={<Profile />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-            <div
-              className="top-btn"
-              ref={topRef}
-              onClick={(e) => handleClickToTop(e)}
-            >
-              <i className="fas fa-arrow-up"></i>
-            </div>
           </>
         ) : (
           <div className="loading-page">

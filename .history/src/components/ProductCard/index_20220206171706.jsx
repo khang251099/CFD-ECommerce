@@ -2,7 +2,7 @@ import React from "react";
 import { add_cart } from "../../redux/actions/cart";
 // import rate from "../../../assets/images/rate.svg";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { add_history } from "../../redux/actions/history";
 import { toast } from "react-toastify";
@@ -14,7 +14,7 @@ const ProductCard = (props) => {
   toast.configure({ autoClose: 1000 });
 
   let { data } = props;
-
+  let navigate = useNavigate();
   const dispatch = useDispatch();
 
   const addToHistory = (e) => {

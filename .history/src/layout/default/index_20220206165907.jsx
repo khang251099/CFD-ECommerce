@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -46,6 +46,7 @@ export function PrivateRoute({ children, ...rest }) {
   // );
 }
 
+
 const LayoutDefault = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -63,6 +64,7 @@ const LayoutDefault = () => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
   const auth = useSelector((state) => state.firebase.auth);
+
 
   const topRef = useRef(null);
 
@@ -83,16 +85,15 @@ const LayoutDefault = () => {
     });
   }, []);
 
+  
   return (
     <>
       <div className="layout-default">
         {loading === false ? (
           <>
-            <Header
-              user={user}
-              className={scroll ? "top-btn show" : "top-btn "}
-            />
+            <Header user={user} />
             <Menu />
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/category/:id" element={<ProductList />} />
@@ -105,19 +106,14 @@ const LayoutDefault = () => {
                 path="/wishlist"
                 element={<WishList wishList={wishList} />}
               />
-
+              <PrivateRoute path="/login">
+                <SignIn />
+              </PrivateRoute>
               <Route path="/profile" element={<Profile />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-            <div
-              className="top-btn"
-              ref={topRef}
-              onClick={(e) => handleClickToTop(e)}
-            >
-              <i className="fas fa-arrow-up"></i>
-            </div>
           </>
         ) : (
           <div className="loading-page">

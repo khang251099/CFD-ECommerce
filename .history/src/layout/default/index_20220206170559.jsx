@@ -111,13 +111,6 @@ const LayoutDefault = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-            <div
-              className="top-btn"
-              ref={topRef}
-              onClick={(e) => handleClickToTop(e)}
-            >
-              <i className="fas fa-arrow-up"></i>
-            </div>
           </>
         ) : (
           <div className="loading-page">
