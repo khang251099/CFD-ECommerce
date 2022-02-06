@@ -1,5 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
+<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
+=======
+import { Routes, Route, Navigate } from "react-router-dom";
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
 import Header from "../Header";
 import Footer from "../Footer";
 import Home from "../../pages/Home/home";

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import mockData from "../../core/mockData/mock";
 import labels from "../../utils/label";
 import Cart from "../Cart";
@@ -8,17 +8,27 @@ import BlogPost from "./BlogPosts";
 import Headline from "./Headline";
 import LeftMenu from "./LeftMenu";
 import OurCustomer from "./OurCustomer";
+import categoryApi from "../../core/api/category";
+import productApi from "../../core/api/product";
 
 const Home = () => {
-  // const [cate, setCate] = useState([]);
+  const [listCate, setListCate] = useState([]);
+  const [pro, setProduct] = useState([]);
+  useEffect(() => {
+    try {
+      const fetchData = async () => {
+        const cateList = await categoryApi.getAll();
+        const productList = await productApi.getAll();
 
-  // useEffect(() => {
-  //   (async () => {})();
-  //   setCate(mockData.data.category);
-  //   return () => {};
-  // }, []);
-  const listCate = mockData.data.category;
-  // console.log(data.quantity);
+        setListCate(cateList);
+        setProduct(productList);
+      };
+      fetchData();
+    } catch (error) {
+      console.log("failed to fetch data", error);
+    }
+  }, []);
+
   return (
     <section className="home-wrapper">
       <div className="container-fluid">
@@ -30,7 +40,7 @@ const Home = () => {
               btn={labels.LEFT_MENU.BTN_CATE}
             />
             <BannerCate />
-            <BannerCate />
+            {/* <BannerCate /> */}
           </section>
           <section className="best-selling --from">
             <LeftMenu
@@ -38,7 +48,7 @@ const Home = () => {
               title={labels.LEFT_MENU.BEST_SALE}
               btn={labels.LEFT_MENU.BTN_PRO}
             />
-            <Best />
+            <Best product={pro} />
           </section>
           <section className="best-selling --from">
             <LeftMenu
@@ -46,18 +56,17 @@ const Home = () => {
               title={labels.LEFT_MENU.BEST_FAMER}
               btn={labels.LEFT_MENU.BTN_PRO}
             />
-            <Best />
+            <Best product={pro} />
           </section>
           <section className="customer">
             <OurCustomer />
           </section>
           <section className="headline">
-            <Headline />
+            <Headline product={pro} />
           </section>
           <section className="read-blog">
             <BlogPost />
           </section>
-          {/* <Cart /> */}
         </div>
       </div>
     </section>
