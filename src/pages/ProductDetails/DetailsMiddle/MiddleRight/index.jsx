@@ -30,9 +30,7 @@ function MiddleRight(props) {
     e.preventDefault();
     dispatch(add_cart(data));
     await toast.success("Add to cart list successfully");
-    setTimeout(() => {
-      navigate("/cart");
-    }, 1500);
+
   };
   const addToWishList = async (e) => {
     e.preventDefault();
