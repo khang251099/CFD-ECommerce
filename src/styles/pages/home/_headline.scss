@@ -1,8 +1,15 @@
 .headline {
   .product__item-wrap {
     grid-template-columns: repeat(4, 1fr) !important;
+<<<<<<< HEAD
     @media (min-width: 1280px) {
       margin-left: unset;
+=======
+    .product-item {
+      @media screen and (min-width: 1280px) {
+        margin-left: unset;
+      }
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
     }
   }
 }

@@ -1,5 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
+<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
+=======
+import { Routes, Route, Navigate } from "react-router-dom";
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
 import Header from "../Header";
 import Footer from "../Footer";
 import Home from "../../pages/Home/home";
@@ -18,6 +22,36 @@ import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { GuardSpinner } from "react-spinners-kit";
 import "./style.scss";
+<<<<<<< HEAD
+=======
+import { isLoaded, isEmpty } from "react-redux-firebase";
+
+export function PrivateRoute({ children, ...rest }) {
+  const auth = useSelector((state) => state.firebase.auth);
+  if (auth?.stsTokenManager?.accessToken) {
+    return <Route path="/blog">children</Route>;
+  }
+
+  return <Route path="/login">children</Route>;
+  // return (
+  //   <Route
+  //     {...rest}
+  //     render={({ location }) =>
+  //       isLoaded(auth) && !isEmpty(auth) ? (
+  //         children
+  //       ) : (
+  //         <Navigate
+  //           to={{
+  //             pathname: "/login",
+  //             state: { from: location },
+  //           }}
+  //         />
+  //       )
+  //     }
+  //   />
+  // );
+}
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
 
 const LayoutDefault = () => {
   const cart = useSelector((state) => state.cart);
@@ -30,10 +64,16 @@ const LayoutDefault = () => {
       setUser(user);
     }
   });
+
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   }, []);
+<<<<<<< HEAD
+=======
+  const auth = useSelector((state) => state.firebase.auth);
+
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
   const topRef = useRef(null);
 
   const handleClickToTop = (e) => {
@@ -68,15 +108,16 @@ const LayoutDefault = () => {
               <Route path="/category/:id" element={<ProductList />} />
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/cart" element={<Cart cart={cart} />} />
+              <Route path="/blog" element={<BlogList />} />
               <Route path="/login" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/blog" element={<BlogList />} />
               <Route
                 path="/wishlist"
                 element={<WishList wishList={wishList} />}
               />
+
               <Route path="/profile" element={<Profile />} />
+              <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
 

@@ -54,6 +54,7 @@ function SignIn(props) {
       .then(async (res) => {
         if (res.user) {
           console.log(res.user);
+          await toast.success("Login successfully");
           setTimeout(() => {
             navigate("/");
           }, 1000);

@@ -2,7 +2,7 @@ import React from "react";
 import { add_cart } from "../../redux/actions/cart";
 // import rate from "../../../assets/images/rate.svg";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
+
 import { useDispatch } from "react-redux";
 import { add_history } from "../../redux/actions/history";
 import { toast } from "react-toastify";
@@ -14,7 +14,7 @@ const ProductCard = (props) => {
   toast.configure({ autoClose: 1000 });
 
   let { data } = props;
-  let navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   const addToHistory = (e) => {
@@ -34,6 +34,7 @@ const ProductCard = (props) => {
         <div className="card">
           <div className="product-image">
             <Link to={`/product/${data.id}`} onClick={addToHistory}>
+<<<<<<< HEAD
               <img
                 src={data.image}
                 style={{
@@ -43,6 +44,9 @@ const ProductCard = (props) => {
                 }}
                 alt=""
               />
+=======
+              <img src={data.image} alt="" />
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
             </Link>
             {parseInt(data.discount) > 0 ? (
               <div className="sale-item">
@@ -50,10 +54,17 @@ const ProductCard = (props) => {
               </div>
             ) : null}
           </div>
+<<<<<<< HEAD
 
           <div className="product-content">
             <h3 className="product-title">{data.title}</h3>
             <p className="desc">{data.description}</p>
+=======
+          <div className="product-content">
+            <h3 className="product-title">{data.title}</h3>
+            <p className="desc">{data.description}</p>
+            <div className="rate  "></div>
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
             <div className="product-button">
               {parseInt(data.discount) > 0 ? (
                 <p className="price">
@@ -68,6 +79,7 @@ const ProductCard = (props) => {
                 " "
               )}
 
+<<<<<<< HEAD
               <Link to="" onClick={(e) => addCart(e, data)} className="btn-buy">
                 <p>Buy now</p>
               </Link>
@@ -81,6 +93,11 @@ const ProductCard = (props) => {
                 <p>Buy now</p>
               </Link>
             )} */}
+=======
+              <Link to="" onClick={(e) => addCart(e, data)} className="btn-buy">
+                <p>Buy now</p>
+              </Link>
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
             </div>
           </div>
         </div>

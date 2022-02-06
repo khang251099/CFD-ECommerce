@@ -40,7 +40,10 @@ const Home = () => {
               btn={labels.LEFT_MENU.BTN_CATE}
             />
             <BannerCate />
+<<<<<<< HEAD
             {/* <BannerCate /> */}
+=======
+>>>>>>> dffbb8bb4d59bae7018b6a001cfbc9468737b159
           </section>
           <section className="best-selling --from">
             <LeftMenu

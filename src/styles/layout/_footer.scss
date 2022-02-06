@@ -21,7 +21,7 @@
       //   margin-top: 14px;
     }
   }
-  margin-left: 220px;
+  // margin-left: 220px;
   &-heading {
     font-family: Poppins;
     font-style: normal;
@@ -47,10 +47,15 @@
   }
   &-wrap {
     &.--top {
-      display: flex;
-      justify-content: flex-start;
-      margin-left: -220px;
-      margin-top: 50px;
+      // display: flex;
+      // justify-content: flex-start;
+      // margin-left: -220px;
+      // margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
+}
+.footer {
+  margin-top: 40px;
 }

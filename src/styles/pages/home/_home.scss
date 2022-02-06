@@ -54,10 +54,13 @@
 .best-selling {
   margin-top: 128px;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   width: 100%;
   .item__left {
     width: 26%;
+    @media screen and (min-width: 1280px) {
+      width: 23%;
+    }
   }
 }
 .headline-top {
